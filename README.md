@@ -13,29 +13,42 @@ The user is prompted to input three values:
 L = float(input("enter barge length (in meters): "))
 B = float(input("enter the barge breadth (in meters): "))
 H = float(input("enter the barge height (in meters): "))
+```
 
 Surface Area Calculation:
 The formula for the surface area (SA_of_barge) accounts for the fact that the barge does not have a lid. The surface area of a rectangular object (with no top) is the sum of the areas of the two sides, two ends, and the bottom.
 Formula used:
+```python
 SA_of_barge = (2*L*H + 2*B*H + L*B)
+```
 
 Mass Calculation:
 The mass of the barge is based on the surface area and the density of iron. The code assumes that the weight of the iron used is 1.06 kg per square meter.
 Formula used:
+```python
 Mass_of_barge = (1.06 * SA_of_barge)
+```
 
 Draft Height Calculation:
 The draft height is the amount of the barge that would be submerged in water, and it is calculated by dividing the mass of the barge by the area of the base of the barge (L \cdot B).
 Formula used:
+```python
 Draft_height = Mass_of_barge / (L * B)
+```
 
 Output:
 The program prints out:
+The user-provided values for the length, breadth, and height.
+The calculated surface area of the barge (in square meters, rounded to 2 decimal places).
+The calculated mass of the barge (in kilograms, rounded to 2 decimal places).
+The calculated draft height of the barge (in meters, rounded to 2 decimal places).
 
+```python
 print("Length: ", L, "Breadth: ", B, "Height: ", H)
 print(f"the surface area of the barge in m^2 is: {SA_of_barge:.2f}")
 print(f"the mass of the draft in KG is: {Mass_of_barge:.2f}")
 print(f"the draft of the barge in metres is: {Draft_height:.2f}")
+```
 
 Test Cases:
 At the bottom of the code, there are sample test cases with specific values for L, B, and H, along with the corresponding expected output for surface area, mass, and draft height. Each test compares expected and actual outputs.
